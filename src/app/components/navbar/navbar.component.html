@@ -1,0 +1,51 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button (click)="esconderAvatar()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <img src="assets/images/logo.svg">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Collections</a>
+          <a class="nav-link" href="#">Men</a>
+          <a class="nav-link" href="#">Women</a>
+          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div>
+            <div style="display:flex; align-items:center; gap:20px;"> 
+                <a href="#" id="carrito" (click)="abrirCarrito()" *ngIf="escondido == false"><img src="assets/images/icon-cart.svg"><span id="carrito-cantidad" *ngIf="cantidad > 0 && carrito == true">{{cantidadCarrito}}</span></a>
+                <div id="cart-drop" *ngIf="abierto == true">
+                    <h4>Cart</h4>
+                        <div id="pedido">
+                            <span *ngIf="arrayCarrito.length == 0">Your Cart Is Empty</span>
+    
+                            <div *ngFor="let par of arrayCarrito; let i = index;" id="Producto">
+                                <div>
+                                <div>
+                                    <img src="{{par.img}}" class="cart-product-img">
+                                </div>
+                                <div>
+                                    <span>{{par.nombre}}</span>
+                                    <br>
+                                    <span>${{par.precio}} x {{par.cantidadPares}} = ${{resultadoX}}</span>
+                                    <div>
+                                        <a href="#" id="checkout-button">Checkout</a>
+                                    </div>
+                                </div>
+                                <img src="assets/images/icon-delete.svg" (click) = "borrarPar(i)" id="delete-img">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div>
+                    <img src="assets/images/image-avatar.png" id="avatar" *ngIf="escondido == false">
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+

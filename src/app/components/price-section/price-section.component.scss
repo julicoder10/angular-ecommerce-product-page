@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+#price-section{
+    display:flex;
+    flex-direction:column;
+    font-family: 'Kumbh Sans', sans-serif;
+    width:500px;
+    #span-title{
+        color:hsl(26, 100%, 55%);
+        font-size:18px;
+    }
+    #title{
+        font-size:45px;
+    }
+    #deal{
+        font-size:16px;
+        color:hsl(26, 100%, 55%);
+        background-color: hsl(25, 88%, 90%);
+        border-radius:5px;
+        padding:3px;
+    }
+
+    h2{
+        display:flex;
+        align-items:center;
+        gap:20px;
+        margin-bottom:-20px;
+    }
+    p{
+        font-size:16px;
+        color:hsl(0, 1%, 55%);
+    }
+    h4{
+        span{
+            text-decoration-line: line-through;
+            font-size:16px;
+            color:hsl(0, 1%, 55%);
+        }
+    }
+}
+#img-and-price{
+    display:flex;
+    padding:30px;
+    justify-content:center;
+    gap:100px;
+    flex-wrap:wrap;
+}
+#cart-icons{
+    display:flex;
+    flex-wrap:wrap;
+}
+#mini-icons{
+    display:flex;
+    padding:5px;
+    align-items:center;
+    justify-content: space-around;
+    width:150px;
+    background-color:rgb(243, 242, 242);
+    margin-right:10px;
+    border-radius: 10px;
+}
+#cart-button{
+    text-align: center;
+    text-decoration: none;
+    background-color:hsl(26, 100%, 55%);
+    color:white;
+    font-size:16px;
+    padding:20px;
+    border-radius:10px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    width:250px;
+    img{
+        padding-right:10px;
+        color:white;
+    }
+    &:hover{
+        background-color:rgb(253, 150, 71);
+    }
+}
+
+// MEDIAQUERIES
+
+@media only screen and (max-width:768px){
+    #cart-icons{
+        gap:20px;
+        margin-top:30px;
+    }
+    #mini-icons{
+        width:70%;
+        padding:20px;
+        margin:auto;
+    }
+    #cart-button{
+        width:70%;
+        padding:20px;
+        margin:auto;
+    }
+    #deal-div{
+        display:flex;
+        align-items: center;
+        gap:30px;
+        h4{
+            margin-top:20px;
+        }
+    }
+}

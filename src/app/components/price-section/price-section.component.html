@@ -1,0 +1,25 @@
+<app-navbar [cantidad] = "cantidad" [precioPar] = "precioPar" [resultadoX] = "resultadoX" [carrito] = "carrito"  [arrayCarrito] = "arrayCarrito" [cantidadCarrito]="cantidadCarrito"></app-navbar>
+<section id="img-and-price">
+    <app-img-section></app-img-section>
+    <section id="price-section">
+        <span id="span-title">SNEAKER COMPANY</span>
+        <h1 id="title">Fall Limite Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+        <div id="deal-div">
+            <h2>${{precioPar}} <span id="deal">50%</span></h2>
+            <h4><span>$250</span></h4>    
+        </div>
+        
+        <div id="cart-icons">
+            <div id="mini-icons">
+                <a (click)="restarPar()"><img src="assets/images/icon-minus.svg"></a>
+                {{cantidad}}
+                <a (click)="sumarPar()"><img src="assets/images/icon-plus.svg"></a>
+            </div>
+            <a href="#" role="button" id="cart-button" (click)="agregarCarrito()" ><img src="assets/images/icon-cart.svg">Add to cart</a>
+        </div>
+    </section>
+    
+</section>
+
+

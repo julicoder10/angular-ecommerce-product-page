@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+header{
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    height:90px;
+    border-bottom:1px solid rgb(219, 218, 218);
+    box-sizing: border-box;
+    div{
+        display:flex;
+        align-items:center;
+        height:100%;
+    }
+
+    
+
+    div:nth-child(1){
+        display:flex;
+        gap:40px;
+        height:100%;
+    }
+
+    div:nth-child(2){
+        display:flex;
+        gap:40px;
+        height:100%;
+        align-items:center;
+    }
+}
+nav{
+    display:flex;
+    align-items: center;
+    gap:30px;
+    height:100%;
+    box-sizing: border-box;
+    .nav-link{
+        text-decoration:none;
+        color:black;
+        height:90px;
+        display:flex;
+        flex-direction: column;
+        padding-top:38px;
+        box-sizing: border-box;
+        font-size:16px;
+        font-family: 'Kumbh Sans', sans-serif;
+        &:hover{
+            border-bottom:5px solid orangered;
+        }
+    }
+}
+#cart-drop{
+    display:block;
+    top:90px;
+    left:70%;
+    position:absolute;
+    min-width:300px;
+    height:auto;
+    background-color:white;
+    padding:15px;
+    font-size:16px;
+    text-align: center;
+    box-shadow: 0 5px 5px black;
+    border-radius:10px;
+    h4{
+        font-size:16px;
+        font-weight:bolder;
+        text-align: start;
+        border-bottom:1px solid rgb(219, 218, 218);
+        padding:10px;
+    }
+    div{
+        display:flex;
+        width:100%;
+    }
+    .cart-product-img{
+        width:45px;
+        height:45px;
+        margin:0;
+    }
+    #delete-img{
+        height:18px;
+        width:18px;
+        &:hover{
+            cursor:pointer;
+        }
+    }
+    #checkout-button{
+    text-align: center;
+    text-decoration: none;
+    background-color:hsl(26, 100%, 55%);
+    color:white;
+    font-size:16px;
+    padding:10px;
+    border-radius:10px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    width:100%;
+    &:hover{
+        background-color:rgb(253, 150, 71);
+    }
+    }
+}
+
+
+#Producto{
+    display:flex;
+    height:200px;
+    align-items:center;
+    gap:10px;
+    div:nth-child(2){
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+.navbar-nav{
+    margin-left:80px;
+    gap:30px;
+    background-color:white;
+    padding:15px;
+    a{
+        margin-bottom:5px;
+    }
+}
+.navbar{
+    height:90px;
+    padding-inline:150px;
+}
+
+#carrito{
+    text-decoration:none;
+    display: flex;
+    gap:3px;
+}
+#carrito-cantidad{
+    padding:5px;
+    background-color:orangered;
+    color:white;
+    font-size:12px;
+    border-radius:50px;
+}
+#avatar{
+    width:42px;
+    height:42px;
+    border-radius:50px;
+    box-sizing: border-box;
+    &:hover{
+        border:1px solid orangered;
+        cursor:pointer;
+    }
+}
+
+#pedido{
+    display:flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width:768px){
+    .navbar{
+        padding-inline:0;
+    }
+    #cart-drop{
+        left:30%;
+        top:55%;
+    }
+}
